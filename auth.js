@@ -1,4 +1,4 @@
 function verifyToken(token) {
-  // TODO: signature check
+  if (!verifySignature(token)) throw new Error("invalid signature");
   return decode(token);
 }
